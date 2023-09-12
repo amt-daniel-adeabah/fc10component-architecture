@@ -7,13 +7,13 @@ const Register = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="register-container">
+      <div className="register-container sidemenu-container">
         <SideMenu />
         <div>
           <TopBar />
-          <p className="title">Create Account</p>
           <div className="account-creation">
             <form className="account-form" onSubmit={() => navigate("/photo")}>
+            <p className="title">Create Account</p>
               <div className="input-element">
                 <label>Name</label>
                 <input type="text" name="name" placeholder="John Doe" />
