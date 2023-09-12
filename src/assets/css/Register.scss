@@ -65,3 +65,10 @@
     }
   }
 }
+
+@media only screen and (min-width: 1380px){
+    .register-container{
+       
+        grid-template-columns: 700px calc(100% - 750px);
+    }
+}
