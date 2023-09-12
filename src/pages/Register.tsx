@@ -11,8 +11,8 @@ const Register = () => {
         <SideMenu />
         <div>
           <TopBar />
-          <p className="title">Create Account</p>
           <div className="account-creation">
+          <p className="title">Create Account</p>
             <form className="account-form" onSubmit={() => navigate("/photo")}>
               <div className="input-element">
                 <label>Name</label>
