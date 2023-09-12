@@ -5,11 +5,13 @@ import TopBar from '../components/TopBar'
 const Register = () => {
   return (
     <>
-        <SideMenu />
+      <div className="sidemenu-container">
+          <SideMenu />
         <div>
           <TopBar />
           <div>Register</div>
         </div>
+      </div>
     </>
   )
 }
