@@ -7,35 +7,50 @@ const Register = () => {
   const navigate = useNavigate();
   return (
     <>
-      <SideMenu />
-      <div>
-        <TopBar />
+      <div className="register-container">
+        <SideMenu />
+        <div>
+          <TopBar />
+          <p className="title">Create Account</p>
           <div className="account-creation">
-            <h4>Create Account</h4>
-            <form className="account-form" onSubmit={() => navigate('/photo')}>
-              <label>Name</label>
-              <input type="text" name="name" placeholder="John Doe" />
-              <label>E-mail</label>
-              <input
-                type="text"
-                name="e-mail"
-                placeholder="johndoe@gmail.com"
-              />
-              <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter password"
-              />
+            <form className="account-form" onSubmit={() => navigate("/photo")}>
+              <div className="input-element">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="John Doe" />
+              </div>
+              <div className="input-element">
+                <label>E-mail</label>
+                <input
+                  type="text"
+                  name="e-mail"
+                  placeholder="johndoe@gmail.com"
+                />
+              </div>
+              <div className="input-element">
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"
+                />
+              </div>
+
               <button type="submit" className="create-btn">
                 Create Account
               </button>
             </form>
-            <button className="sign-up">Sign up with Google</button>
+            <button className="sign-up" onClick={() => navigate("/photo")}>
+              <img
+                className="google-logo"
+                src="src/assets/images/Google logo.png"
+              />
+              <p>Sign up with Google</p>
+            </button>
             <div className="login">
-              Already have an account? <a href="#">Log in</a>
+              Already have an account? <a href="/photo">Log In</a>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
