@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 700px calc(100% - 750px);
   height: 100vh;
-  align-items: center;
 
   .account-creation {
     display: flex;
@@ -11,7 +10,6 @@
     align-items: center;
     justify-content: center;
     .title {
-      text-align: left;
       font-size: 2.5rem;
     }
     button {
@@ -66,9 +64,3 @@
   }
 }
 
-@media only screen and (min-width: 1380px){
-    .register-container{
-       
-        grid-template-columns: 700px calc(100% - 750px);
-    }
-}
