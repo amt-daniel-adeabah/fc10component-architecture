@@ -1,11 +1,6 @@
 .top-bar{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    margin: 3rem 5rem;
-    width: 824px;
-
-    .back-button {
-        cursor: pointer;
-    }
+    padding: 3rem 0 0 0;
 }

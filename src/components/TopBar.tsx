@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import BackArrow from "../assets/images/back-arrow.svg"
-import "../assets/css/topbar.scss";
+import "../assets/css/Topbar.scss";
 
 const TopBar = () => {
   const location = useLocation();
