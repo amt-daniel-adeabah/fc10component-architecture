@@ -1,4 +1,15 @@
-img {
-    height: 200px;
-    width: 300px;
+.sidemenu-container {
+    display: flex;
+}
+
+.sidemenu {
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    background-color: #0267FF;
+
+    img {
+        width: 100vh;
+        height: 108vh;
+    }
 }

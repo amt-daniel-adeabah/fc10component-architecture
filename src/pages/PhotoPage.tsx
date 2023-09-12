@@ -5,11 +5,13 @@ import TopBar from '../components/TopBar'
 const Photo = () => {
   return (
     <>
-        <SideMenu />
+      <div className="sidemenu-container">
+          <SideMenu />
         <div>
           <TopBar />
           <div>Photo</div>
         </div>
+      </div>
     </>
   )
 }
