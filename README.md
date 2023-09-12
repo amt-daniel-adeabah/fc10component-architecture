@@ -1,0 +1,1 @@
+# fc10component-architecture
