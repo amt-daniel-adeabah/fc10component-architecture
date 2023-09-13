@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 3rem 5rem;
-    width: 500px;
+    width: 800px;
 
     .back-button {
         cursor: pointer;
@@ -15,5 +15,6 @@
     .top-bar{
         display: flex;
         justify-content: space-between;  
+        width: 500px;
     }
 }
