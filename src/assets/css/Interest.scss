@@ -95,11 +95,19 @@
 
 @media only screen and (max-width: 1300px) {
     .interest-container {
-        margin: 80px 70px;
-        width: 80%;
+        margin: 80px 5px;
+        width: 100%;
         .interest-column .continue {
-            margin-top: 7rem;
+            margin-top: 5rem;
         }
+        .interest-column .pick-row .pick-button{
+            width: 180px;
+            height: 140px;
+        }
+        .interest-column .pick-continue{
+            margin-top: 1rem;
+        }
+        
     }
 
 }
