@@ -11,9 +11,9 @@ const InterestSuccess = () => {
   };
 
   return (
-    <div className="sidemenu-container">
+    <div className="success-width sidemenu-container">
       <SideMenu />
-      <div>
+      <div className="success-column">
         <div className="interest-container">
           <div className="interest-column">
             <h1>Wohoo!</h1>

@@ -36,6 +36,10 @@
       @media (min-width: 722px) and (max-width: 1018px) {
         width: var(--topnav-width-large);
       }
+
+      @media (max-width: 1600px){
+        width: var(--topnav-width-medium);
+      }
     }
   
     .back-button {
