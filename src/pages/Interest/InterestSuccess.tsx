@@ -16,7 +16,7 @@ const InterestSuccess = () => {
       <div>
         <div className="interest-container">
           <div className="interest-column">
-            <h1>Add Photo</h1>
+            <h1>Hey there!</h1>
             <p>
               Hey there! Your registration is complete, get excited for the ultimate quiz experience of your life.
               Let's do this!
