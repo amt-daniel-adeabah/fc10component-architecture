@@ -1,44 +1,49 @@
 .topbar-container {
-    margin: 80px 300px;
-    width: 50%;
+  margin: 80px 300px;
+  width: 100%;
 
-    .topbar-column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .topbar-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        img {
-            margin-top: 50px;
-            cursor: pointer;
-        }
-
-        button {
-            width: 200px;
-            height: 30px;
-            margin-top: 10px;
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-
-        }
-        button:hover {
-            width: 210px;
-        }
-        .upload {
-            margin-top: 400px;
-            background-color: #0267FF;
-            color: #fff;
-        }
-        .skip {
-            background-color: #ffffff;
-            color: #000;
-        }
+    img {
+      margin-top: 50px;
+      cursor: pointer;
     }
+
+    button {
+      width: 200px;
+      height: 30px;
+      margin-top: 10px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      width: 210px;
+    }
+    .upload {
+      margin-top: 400px;
+      background-color: #0267ff;
+      color: #fff;
+    }
+    .skip {
+      background-color: #ffffff;
+      color: #000;
+    }
+  }
 }
 
-@media only screen and (max-width: 1600px) {
-    .topbar-container {
-        margin: 0 auto;
-    }
+@media only screen and (max-width: 1650px) {
+  .topbar-container {
+    margin: 0 auto;
+    .topbar-column .upload {
+        margin-top: 100px;
+        background-color: #0267ff;
+        color: #fff;
+      }
+  }
+  
 }

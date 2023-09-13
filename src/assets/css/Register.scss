@@ -1,7 +1,5 @@
 .register-container {
   font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  grid-template-columns: 700px calc(100% - 750px);
   height: 100vh;
 
   .account-creation {
@@ -63,4 +61,5 @@
     }
   }
 }
+
 
