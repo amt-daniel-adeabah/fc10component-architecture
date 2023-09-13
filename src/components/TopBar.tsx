@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import BackArrow from "../assets/images/back-arrow.svg"
-import "../assets/css/TopBar.scss";
+import "../assets/css/topbar.scss";
 
 const TopBar = () => {
   const location = useLocation();
@@ -39,15 +39,17 @@ const TopBar = () => {
   };
 
   return (
-    <div className="top-bar">
-      {showOrHideBackButton()}
-      <div className="steps">
-        <b>
-        Step {getStep()} 
-        </b>
-        &nbsp;of 4
-      </div>
-      Exit
+    <div className="top-container">
+      <div className="topnav">
+        {showOrHideBackButton()}
+        <div className="steps">
+          <b>
+          Step {getStep()} 
+          </b>
+          &nbsp;of 4
+        </div>
+        Exit
+        </div>
     </div>
   );
 };

@@ -32,7 +32,7 @@ const InterestPick = () => {
               ))}
             </div>
 
-            <button className="pick-continue" onClick={() => navigate("/interest/success")}>
+            <button className="continue" onClick={() => navigate("/interest/success")}>
               Continue
             </button>
           </div>
