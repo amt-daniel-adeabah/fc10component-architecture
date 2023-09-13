@@ -4,7 +4,7 @@ import TopBar from '../components/TopBar'
 import BlankPhoto from "../assets/images/empty-image.svg"
 import "../assets/css/Photo.scss"
 
-const Photo = () => {
+const PhotoPage = () => {
   const navigate = useNavigate();
 
   return (
@@ -29,4 +29,4 @@ const Photo = () => {
   )
 }
 
-export default Photo
+export default PhotoPage

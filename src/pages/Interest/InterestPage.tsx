@@ -10,7 +10,7 @@ const interestOptions = [
   { label: "+ Rewards and recognition", className: "interests-button" },
 ];
 
-const Interest = () => {
+const InterestPage = () => {
   const navigate = useNavigate();
 
   return (
@@ -42,4 +42,4 @@ const Interest = () => {
   );
 };
 
-export default Interest;
+export default InterestPage;
