@@ -13,6 +13,9 @@
     @media (max-width: 1024px) {
       width: var(--container-width-mobile);
     }
+    @media (max-width: 1600px){
+      width: var(--container-width-mobile)
+    }
   
     .photo-column {
       display: flex;
