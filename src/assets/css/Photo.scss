@@ -1,5 +1,5 @@
 .topbar-container {
-  margin: 80px 300px;
+  margin: 80px 50px;
   width: 100%;
 
   .topbar-column {
@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1300px) {
   .topbar-container {
     margin: 0 auto;
     .topbar-column .upload {

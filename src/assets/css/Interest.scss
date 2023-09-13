@@ -1,6 +1,6 @@
 .interest-container {
-    margin: 80px 300px;
-    width: 50%;
+    margin: 80px 50px;
+    width: 100%;
 
     .interest-column {
         display: flex;
@@ -91,4 +91,15 @@
             color: #fff;
         }
     }
+}
+
+@media only screen and (max-width: 1300px) {
+    .interest-container {
+        margin: 80px 70px;
+        width: 80%;
+        .interest-column .continue {
+            margin-top: 7rem;
+        }
+    }
+
 }
