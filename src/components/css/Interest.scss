@@ -44,10 +44,13 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        width: var(--pick-button-size);
-        height: var(--pick-button-size);
+        width: var(--button-width);
+        height: var(--button-width);
         padding: 10px;
-
+        @media (max-width: 1600px){
+          width: var(--pick-button-size);
+          height: var(--pick-button-size);
+        }
         h1 {
           font-size: 1.5rem;
         }
@@ -130,7 +133,7 @@
       background-color: #0267ff;
       color: #fff;
       @media (max-width: 1600px) {
-        margin-top: 10vh;
+        margin-top: 3vh;
       }
     }
   }
