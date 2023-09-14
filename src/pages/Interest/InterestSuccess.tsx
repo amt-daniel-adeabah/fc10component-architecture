@@ -1,14 +1,9 @@
-import "../../assets/css/Interest.scss";
+import "../../components/css/Interest.scss";
 import SideMenu from "../../components/SideMenu";
 import VictoryPhoto from "../../assets/images/victory-success.svg";
-import { useNavigate } from "react-router-dom";
+import { FormPage } from "../../types/Types";
 
-const InterestSuccess = () => {
-  const navigate = useNavigate();
-
-  const handleContinue = () => {
-    navigate("/interest/pick");
-  };
+const InterestSuccess = ({formHomePage}:{formHomePage:React.Dispatch<React.SetStateAction<FormPage>>}) => {
 
   return (
     <div className="success-width sidemenu-container">
@@ -23,7 +18,15 @@ const InterestSuccess = () => {
             </p>
             <img src={VictoryPhoto} alt="Victory Success" className="victory-success" />
 
-            <button className="continue" onClick={handleContinue}>
+            <button className="continue" onClick={() =>
+                  formHomePage({
+                    register: true,
+                    photo: false,
+                    interest_page: false,
+                    interest_pick: false,
+                    interest_success: false,
+                  })
+                }>
               Continue
             </button>
           </div>

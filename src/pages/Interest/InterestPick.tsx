@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import "../../assets/css/Interest.scss";
+import "../../components/css/Interest.scss";
 import SideMenu from "../../components/SideMenu";
 import TopBar from "../../components/TopBar";
+import { FormPage } from "../../types/Types";
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
@@ -10,8 +10,7 @@ const interests = [
   { name: "Reading", className: "pick-reading-button" },
 ];
 
-const InterestPick = () => {
-  const navigate = useNavigate();
+const InterestPick = ({formHomePage}:{formHomePage:React.Dispatch<React.SetStateAction<FormPage>>}) => {
 
   return (
     <div className="sidemenu-container">
@@ -32,7 +31,15 @@ const InterestPick = () => {
               ))}
             </div>
 
-            <button className="continue" onClick={() => navigate("/interest/success")}>
+            <button className="continue" onClick={() =>
+                  formHomePage({
+                    register: false,
+                    photo: false,
+                    interest_page: false,
+                    interest_pick: false,
+                    interest_success: true,
+                  })
+                }>
               Continue
             </button>
           </div>

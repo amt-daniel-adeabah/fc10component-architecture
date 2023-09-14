@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import '../assets/css/SideMenu.scss';
+import '../components/css/SideMenu.scss';
 
 import WomanLaptop from '../assets/images/woman-hold-laptop.svg';
 import WomanLaptopWhite from '../assets/images/woman-hold-laptop-white.svg';

@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import "../../assets/css/Interest.scss";
+import "../../components/css/Interest.scss";
 import SideMenu from "../../components/SideMenu";
 import TopBar from "../../components/TopBar";
+import { FormPage } from "../../types/Types";
 
 const interestOptions = [
   { label: "+ Social Interaction", className: "active-button" },
@@ -10,8 +10,7 @@ const interestOptions = [
   { label: "+ Rewards and recognition", className: "interests-button" },
 ];
 
-const InterestPage = () => {
-  const navigate = useNavigate();
+const InterestPage = ({formHomePage}:{formHomePage:React.Dispatch<React.SetStateAction<FormPage>>}) => {
 
   return (
     <div className="sidemenu-container">
@@ -32,7 +31,15 @@ const InterestPage = () => {
                 </button>
               ))}
 
-            <button className="continue" onClick={() => navigate("/interest/pick")}>
+            <button className="continue" onClick={() =>
+                  formHomePage({
+                    register: false,
+                    photo: false,
+                    interest_page: false,
+                    interest_pick: true,
+                    interest_success: false,
+                  })
+                }>
               Continue
             </button>
           </div>

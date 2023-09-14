@@ -1,10 +1,13 @@
 import './index.css'
-import AppRoutes from './router/AppRoutes'
+import Register from './pages/Register'
+
 
 function App() {
-
+  
   return (
-    <AppRoutes />
+    <>
+        <Register />
+    </>
   )
 }
 
