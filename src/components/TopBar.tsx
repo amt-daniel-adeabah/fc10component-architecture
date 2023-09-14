@@ -1,33 +1,31 @@
 import BackArrow from "../assets/images/back-arrow.svg";
 import "../components/css/topbar.scss";
 
-const TopBar = () => {
+interface TopBarProps {
+  currentPage: string; 
+}
 
-  const showBackButton = location.pathname !== "/register";
+const TopBar: React.FC<TopBarProps> = ({ currentPage }) => {
+  let step = 1;
 
-  const getStep = () => {
-    switch (location.pathname) {
-      case "/photo":
-        return 2;
-      case "/interest":
-        return 3;
-      case "/interest/pick":
-        return 4;
-      default:
-        return 1;
-    }
-  };
+  if (currentPage === "photoPage") {
+    step = 2;
+  } else if (currentPage === "interestPage") {
+    step = 3;
+  } else if (currentPage === "interestPick") {
+    step = 4;
+  }
 
   return (
     <div className="top-container">
       <div className="topnav">
-        {showBackButton && (
+        {currentPage !== "registerPage" && (
           <div className="back-button">
             <img src={BackArrow} alt="" /> Back
           </div>
         )}
         <div className="steps">
-          <b>Step {getStep()}</b> &nbsp;of 4
+          <b>Step {step}</b> &nbsp;of 4 
         </div>
         Exit
       </div>

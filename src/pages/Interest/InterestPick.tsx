@@ -3,6 +3,14 @@ import SideMenu from "../../components/SideMenu";
 import TopBar from "../../components/TopBar";
 import { FormPage } from "../../types/Types";
 
+const PageStates = {
+  Register: "register",
+  Photo: "photo",
+  Interest: "interest",
+  InterestPick: "interestPick",
+  InterestSuccess: "interestSuccess",
+};
+
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
   { name: "Fashion", className: "pick-fashion-button" },
@@ -10,36 +18,65 @@ const interests = [
   { name: "Reading", className: "pick-reading-button" },
 ];
 
-const InterestPick = ({formHomePage}:{formHomePage:React.Dispatch<React.SetStateAction<FormPage>>}) => {
+interface InterestButtonProps {
+  name: string;
+  className: string;
+}
+
+const InterestButton = ({ name, className }: InterestButtonProps) => (
+  <div className={`pick-button ${className}`}>
+    <h1>{name}</h1>
+    <button>Add</button>
+  </div>
+);
+
+const InterestPick = ({
+  formHomePage,
+}: {
+  formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
+}) => {
+  const currentPage = PageStates.InterestPick;
 
   return (
     <div className="sidemenu-container">
-      <SideMenu />
+      <SideMenu
+        registerPage={currentPage === PageStates.Register}
+        photoPage={currentPage === PageStates.Photo}
+        interestPage={currentPage === PageStates.Interest}
+        interestPick={currentPage === PageStates.InterestPick}
+        interestSuccess={currentPage === PageStates.InterestSuccess}
+      />
       <div>
-        <TopBar />
+      <TopBar currentPage="interestPick" />
         <div className="interest-container">
           <div className="interest-column">
             <h1>Let’s get started by picking some interests</h1>
-            <p>Alright, let's pick something we're interested in and get started!</p>
+            <p>
+              Alright, let's pick something we're interested in and get started!
+            </p>
 
             <div className="pick-row">
               {interests.map((interest, index) => (
-                <div key={index} className={`pick-button ${interest.className}`}>
-                  <h1>{interest.name}</h1>
-                  <button>Add</button>
-                </div>
+                <InterestButton
+                  key={index}
+                  name={interest.name}
+                  className={interest.className}
+                />
               ))}
             </div>
 
-            <button className="continue" onClick={() =>
-                  formHomePage({
-                    register: false,
-                    photo: false,
-                    interest_page: false,
-                    interest_pick: false,
-                    interest_success: true,
-                  })
-                }>
+            <button
+              className="continue"
+              onClick={() =>
+                formHomePage({
+                  register: false,
+                  photo: false,
+                  interest_page: false,
+                  interest_pick: false,
+                  interest_success: true,
+                })
+              }
+            >
               Continue
             </button>
           </div>

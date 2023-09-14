@@ -8,6 +8,14 @@ import InterestPage from "./Interest/InterestPage";
 import InterestPick from "./Interest/InterestPick";
 import InterestSuccess from "./Interest/InterestSuccess";
 
+const PageStates = {
+  Register: "register",
+  Photo: "photo",
+  Interest: "interest",
+  InterestPick: "interestPick",
+  InterestSuccess: "interestSuccess",
+};
+
 const Register = () => {
   const [formPage, setFormPage] = useState<FormPage>({
     register: true,
@@ -17,13 +25,31 @@ const Register = () => {
     interest_success: false,
   });
 
+  const currentPage = formPage.register
+    ? PageStates.Register
+    : formPage.photo
+    ? PageStates.Photo
+    : formPage.interest_page
+    ? PageStates.Interest
+    : formPage.interest_pick
+    ? PageStates.InterestPick
+    : formPage.interest_success
+    ? PageStates.InterestSuccess
+    : "";
+
   return (
     <>
-      {formPage.register && (
+      {currentPage === PageStates.Register && (
         <div className="register-container sidemenu-container">
-          <SideMenu />
+          <SideMenu
+            registerPage={currentPage === PageStates.Register}
+            photoPage={currentPage === PageStates.Photo}
+            interestPage={currentPage === PageStates.Interest}
+            interestPick={currentPage === PageStates.InterestPick}
+            interestSuccess={currentPage === PageStates.InterestSuccess}
+          />
           <div>
-            <TopBar />
+          <TopBar currentPage="registerPage" />
             <div className="account-creation">
               <form
                 className="account-form"
@@ -78,6 +104,7 @@ const Register = () => {
                 <img
                   className="google-logo"
                   src="src/assets/images/Google logo.png"
+                  alt="Google Logo"
                 />
                 <p>Sign up with Google</p>
               </button>
@@ -88,10 +115,16 @@ const Register = () => {
           </div>
         </div>
       )}
-      {formPage.photo && <PhotoPage formHomePage={setFormPage} />}
-      {formPage.interest_page && <InterestPage formHomePage={setFormPage} />}
-      {formPage.interest_pick && <InterestPick formHomePage={setFormPage} />}
-      {formPage.interest_success && (
+      {currentPage === PageStates.Photo && (
+        <PhotoPage formHomePage={setFormPage} />
+      )}
+      {currentPage === PageStates.Interest && (
+        <InterestPage formHomePage={setFormPage} />
+      )}
+      {currentPage === PageStates.InterestPick && (
+        <InterestPick formHomePage={setFormPage} />
+      )}
+      {currentPage === PageStates.InterestSuccess && (
         <InterestSuccess formHomePage={setFormPage} />
       )}
     </>
