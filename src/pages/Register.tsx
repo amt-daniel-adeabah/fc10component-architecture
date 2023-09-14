@@ -1,10 +1,14 @@
 import { useNavigate } from "react-router-dom";
+//import {GoogleLogin, useGoogleLogin} from '@react-oauth/google';
 import "../assets/css/Register.scss";
 import SideMenu from "../components/SideMenu";
 import TopBar from "../components/TopBar";
 
 const Register = () => {
   const navigate = useNavigate();
+  // const login = useGoogleLogin({
+  //   onSuccess: tokenResponse => console.log(tokenResponse)
+  // })
   return (
     <>
       <div className="register-container sidemenu-container">
@@ -39,6 +43,15 @@ const Register = () => {
                 Create Account
               </button>
             </form>
+            {/* <GoogleLogin
+            onSuccess={credentialResponse =>{
+              console.log(credentialResponse);
+            }}
+            onError={() =>{
+              console.log('Login Failed');
+            }}
+            
+            /> */}
             <button className="sign-up" onClick={() => navigate("/photo")}>
               <img
                 className="google-logo"
