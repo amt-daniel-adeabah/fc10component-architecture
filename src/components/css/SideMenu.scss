@@ -18,14 +18,14 @@
   }
 
   @media (max-width: 1600px){
-    //width: 100vh;
+    
   }
 }
 
 .sidemenu {
   position: relative;
   height: 100vh;
-  width: var(--sidemenu-width-medium);
+  width: 60%;
   background-color: #0267ff;
 
   img {
