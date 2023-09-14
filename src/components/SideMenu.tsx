@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import '../components/css/SideMenu.scss';
 
 import WomanLaptop from '../assets/images/woman-hold-laptop.svg';
@@ -16,7 +15,6 @@ const backgroundImages: { [key: string]: string } = {
 };
 
 const SideMenu = () => {
-  const location = useLocation();
   const backgroundImage = backgroundImages[location.pathname] || WomanLaptop;
 
   return (

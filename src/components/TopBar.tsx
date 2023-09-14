@@ -1,18 +1,7 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import BackArrow from "../assets/images/back-arrow.svg";
 import "../components/css/topbar.scss";
 
 const TopBar = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const handleBackButtonClick = () => {
-    if (location.pathname === "/photo") {
-      navigate("/register");
-    } else if (location.pathname === "/interest" || location.pathname === "/interest/pick") {
-      navigate("/photo");
-    }
-  };
 
   const showBackButton = location.pathname !== "/register";
 
@@ -33,7 +22,7 @@ const TopBar = () => {
     <div className="top-container">
       <div className="topnav">
         {showBackButton && (
-          <div className="back-button" onClick={handleBackButtonClick}>
+          <div className="back-button">
             <img src={BackArrow} alt="" /> Back
           </div>
         )}
