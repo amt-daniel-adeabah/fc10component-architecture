@@ -32,13 +32,11 @@ const InterestPick = ({formHomePage}:{formHomePage:React.Dispatch<React.SetState
             </div>
 
             <button className="continue" onClick={() =>
-                  formHomePage({
-                    register: false,
-                    photo: false,
-                    interest_page: false,
+                  formHomePage(prevState =>({
+                    ...prevState,
                     interest_pick: false,
                     interest_success: true,
-                  })
+                  }))
                 }>
               Continue
             </button>

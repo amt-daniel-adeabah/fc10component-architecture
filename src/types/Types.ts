@@ -1,7 +1,8 @@
 export type FormPage = {
-    register: boolean,
-    photo: boolean,
-    interest_page: boolean,
-    interest_pick: boolean,
-    interest_success: boolean
+    register?: boolean,
+    photo?: boolean,
+    interest_page?: boolean,
+    interest_pick?: boolean,
+    interest_success?: boolean,
+    pageNumber?: number
 }

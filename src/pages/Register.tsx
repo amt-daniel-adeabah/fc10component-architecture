@@ -15,6 +15,7 @@ const Register = () => {
     interest_page: false,
     interest_pick: false,
     interest_success: false,
+    pageNumber: 1
   });
 
   return (
@@ -28,13 +29,12 @@ const Register = () => {
               <form
                 className="account-form"
                 onSubmit={() =>
-                  setFormPage({
+                  setFormPage(prevState =>({
+                    ...prevState,
                     register: false,
                     photo: true,
-                    interest_page: false,
-                    interest_pick: false,
-                    interest_success: false,
-                  })
+                    pageNumber: 2
+                  }))
                 }
               >
                 <p className="title">Create Account</p>
@@ -66,13 +66,12 @@ const Register = () => {
               <button
                 className="sign-up"
                 onClick={() =>
-                  setFormPage({
+                  setFormPage(prevState =>({
+                    ...prevState,
                     register: false,
                     photo: true,
-                    interest_page: false,
-                    interest_pick: false,
-                    interest_success: false,
-                  })
+                    pageNumber: 2
+                  }))
                 }
               >
                 <img

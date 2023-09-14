@@ -46,6 +46,9 @@
         margin-top: 30vh;
         background-color: #0267FF;
         color: #fff;
+        @media (max-width: 1600px){
+          margin-top: 20vh;
+        }
       }
   
       .skip {

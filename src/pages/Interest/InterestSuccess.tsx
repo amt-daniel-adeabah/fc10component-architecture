@@ -19,13 +19,12 @@ const InterestSuccess = ({formHomePage}:{formHomePage:React.Dispatch<React.SetSt
             <img src={VictoryPhoto} alt="Victory Success" className="victory-success" />
 
             <button className="continue" onClick={() =>
-                  formHomePage({
+                  formHomePage(prevState =>({
+                    ...prevState,
                     register: true,
-                    photo: false,
-                    interest_page: false,
-                    interest_pick: false,
                     interest_success: false,
-                  })
+                    pageNumber: 1
+                  }))
                 }>
               Continue
             </button>

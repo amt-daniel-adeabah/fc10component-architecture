@@ -25,13 +25,12 @@ const PhotoPage = ({
               <button
                 className="upload"
                 onClick={() =>
-                  formHomePage({
-                    register: false,
+                  formHomePage(prevState =>({
+                    ...prevState,
                     photo: false,
                     interest_page: true,
-                    interest_pick: false,
-                    interest_success: false,
-                  })
+                    pageNumber: 3
+                  }))
                 }
               >
                 Upload a photo
@@ -39,13 +38,12 @@ const PhotoPage = ({
               <button
                 className="skip"
                 onClick={() =>
-                  formHomePage({
-                    register: false,
+                  formHomePage(prevState =>({
+                    ...prevState,
                     photo: false,
                     interest_page: true,
-                    interest_pick: false,
-                    interest_success: false,
-                  })
+                    pageNumber: 3
+                  }))
                 }
               >
                 Skip
