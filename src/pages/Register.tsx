@@ -88,7 +88,6 @@ const Register = () => {
                 <button type="submit" className="create-btn">
                   Create Account
                 </button>
-              </form>
               <button
                 className="sign-up"
                 onClick={() =>
@@ -111,6 +110,7 @@ const Register = () => {
               <div className="login">
                 Already have an account? <a href="#">Log In</a>
               </div>
+              </form>
             </div>
           </div>
         </div>
