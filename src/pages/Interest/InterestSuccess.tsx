@@ -8,11 +8,11 @@ const PageStates = {
   Photo: "photo",
   Interest: "interest",
   InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess",
+  InterestSuccess: "interestSuccess"
 };
 
 const ContinueButton = ({
-  formHomePage,
+  formHomePage
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => (
@@ -24,7 +24,7 @@ const ContinueButton = ({
         photo: false,
         interest_page: false,
         interest_pick: false,
-        interest_success: false,
+        interest_success: false
       })
     }
   >
@@ -33,7 +33,7 @@ const ContinueButton = ({
 );
 
 const InterestSuccess = ({
-  formHomePage,
+  formHomePage
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {

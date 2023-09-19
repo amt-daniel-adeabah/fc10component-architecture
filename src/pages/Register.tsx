@@ -13,7 +13,7 @@ const PageStates = {
   Photo: "photo",
   Interest: "interest",
   InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess",
+  InterestSuccess: "interestSuccess"
 };
 
 const Register = () => {
@@ -22,7 +22,7 @@ const Register = () => {
     photo: false,
     interest_page: false,
     interest_pick: false,
-    interest_success: false,
+    interest_success: false
   });
 
   const currentPage = formPage.register
@@ -49,7 +49,7 @@ const Register = () => {
             interestSuccess={currentPage === PageStates.InterestSuccess}
           />
           <div>
-          <TopBar currentPage="registerPage" />
+            <TopBar currentPage="registerPage" />
             <div className="account-creation">
               <form
                 className="account-form"
@@ -59,7 +59,7 @@ const Register = () => {
                     photo: true,
                     interest_page: false,
                     interest_pick: false,
-                    interest_success: false,
+                    interest_success: false
                   })
                 }
               >
@@ -97,7 +97,7 @@ const Register = () => {
                     photo: true,
                     interest_page: false,
                     interest_pick: false,
-                    interest_success: false,
+                    interest_success: false
                   })
                 }
               >

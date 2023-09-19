@@ -2,7 +2,7 @@ import BackArrow from "../assets/images/back-arrow.svg";
 import "../components/css/topbar.scss";
 
 interface TopBarProps {
-  currentPage: string; 
+  currentPage: string;
 }
 
 const TopBar: React.FC<TopBarProps> = ({ currentPage }) => {
@@ -25,7 +25,7 @@ const TopBar: React.FC<TopBarProps> = ({ currentPage }) => {
           </div>
         )}
         <div className="steps">
-          <b>Step {step}</b> &nbsp;of 4 
+          <b>Step {step}</b> &nbsp;of 4
         </div>
         Exit
       </div>

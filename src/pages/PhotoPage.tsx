@@ -9,11 +9,11 @@ const PageStates = {
   Photo: "photo",
   Interest: "interest",
   InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess",
+  InterestSuccess: "interestSuccess"
 };
 
 const PhotoPage = ({
-  formHomePage,
+  formHomePage
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
@@ -29,7 +29,7 @@ const PhotoPage = ({
         interestSuccess={currentPage === PageStates.InterestSuccess}
       />
       <div>
-      <TopBar currentPage="photoPage" />
+        <TopBar currentPage="photoPage" />
         <div className="photo-container">
           <div className="photo-column">
             <h1>Add Photo</h1>
@@ -44,7 +44,7 @@ const PhotoPage = ({
                   photo: false,
                   interest_page: true,
                   interest_pick: false,
-                  interest_success: false,
+                  interest_success: false
                 })
               }
             >
@@ -58,7 +58,7 @@ const PhotoPage = ({
                   photo: false,
                   interest_page: true,
                   interest_pick: false,
-                  interest_success: false,
+                  interest_success: false
                 })
               }
             >

@@ -8,14 +8,14 @@ const PageStates = {
   Photo: "photo",
   Interest: "interest",
   InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess",
+  InterestSuccess: "interestSuccess"
 };
 
 const interestOptions = [
   { label: "+ Social Interaction", className: "active-button" },
   { label: "+ Personal development", className: "interests-button" },
   { label: "+ Entertainment and Fun", className: "interests-button" },
-  { label: "+ Rewards and recognition", className: "interests-button" },
+  { label: "+ Rewards and recognition", className: "interests-button" }
 ];
 
 interface InterestButtonProps {
@@ -28,7 +28,7 @@ const InterestButton = ({ label, className }: InterestButtonProps) => (
 );
 
 const InterestPage = ({
-  formHomePage,
+  formHomePage
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
@@ -44,7 +44,7 @@ const InterestPage = ({
         interestSuccess={currentPage === PageStates.InterestSuccess}
       />
       <div>
-      <TopBar currentPage="interestPage" />
+        <TopBar currentPage="interestPage" />
         <div className="interest-container">
           <div className="interest-column">
             <h1>Hey there! What brings you here?</h1>
@@ -66,7 +66,7 @@ const InterestPage = ({
                   photo: false,
                   interest_page: false,
                   interest_pick: true,
-                  interest_success: false,
+                  interest_success: false
                 })
               }
             >
