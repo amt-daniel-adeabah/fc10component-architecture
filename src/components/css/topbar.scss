@@ -7,11 +7,7 @@
   --topnav-width-small: 320px;
   --topnav-width-medium: 450px;
   --topnav-width-large: 570px;
-<<<<<<< Updated upstream
-  --topnav-width-xl: 820px;
-=======
   --topnav-width-xl: 920px;
->>>>>>> Stashed changes
 }
 
 .top-container {
@@ -41,11 +37,7 @@
       width: var(--topnav-width-large);
     }
 
-<<<<<<< Updated upstream
-    @media (max-width: 1600px){
-=======
     @media (max-width: 1600px) {
->>>>>>> Stashed changes
       width: var(--topnav-width-medium);
     }
   }
@@ -54,7 +46,3 @@
     cursor: pointer;
   }
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes

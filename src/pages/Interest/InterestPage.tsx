@@ -44,7 +44,7 @@ const InterestPage = ({
         interestSuccess={currentPage === PageStates.InterestSuccess}
       />
       <div>
-        <TopBar currentPage="interestPage" />
+      <TopBar currentPage="interestPage" formHomePage={formHomePage} /> 
         <div className="interest-container">
           <div className="interest-column">
             <h1>Hey there! What brings you here?</h1>
