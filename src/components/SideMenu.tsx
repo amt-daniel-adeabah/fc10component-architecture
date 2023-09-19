@@ -11,7 +11,7 @@ const backgroundImages: Record<string, string> = {
   photoPage: BoyTablet,
   interestPage: ManLaptop,
   interestPick: WomanLaptopWhite,
-  interestSuccess: WomanHappy,
+  interestSuccess: WomanHappy
 };
 
 const SideMenu = ({
@@ -19,7 +19,7 @@ const SideMenu = ({
   photoPage,
   interestPage,
   interestPick,
-  interestSuccess,
+  interestSuccess
 }: {
   registerPage: boolean;
   photoPage: boolean;

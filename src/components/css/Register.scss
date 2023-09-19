@@ -6,7 +6,9 @@
 .register-container {
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
-  grid-template-columns: var(--container-width-left) var(--container-width-right);
+  grid-template-columns: var(--container-width-left) var(
+      --container-width-right
+    );
   height: 100vh;
 }
 
@@ -77,3 +79,8 @@
     }
   }
 }
+<<<<<<< Updated upstream
+=======
+@media only screen and (max-width: 1300px) {
+}
+>>>>>>> Stashed changes

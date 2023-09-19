@@ -8,14 +8,14 @@ const PageStates = {
   Photo: "photo",
   Interest: "interest",
   InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess",
+  InterestSuccess: "interestSuccess"
 };
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
   { name: "Fashion", className: "pick-fashion-button" },
   { name: "Music", className: "pick-music-button" },
-  { name: "Reading", className: "pick-reading-button" },
+  { name: "Reading", className: "pick-reading-button" }
 ];
 
 interface InterestButtonProps {
@@ -31,7 +31,7 @@ const InterestButton = ({ name, className }: InterestButtonProps) => (
 );
 
 const InterestPick = ({
-  formHomePage,
+  formHomePage
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
@@ -47,10 +47,10 @@ const InterestPick = ({
         interestSuccess={currentPage === PageStates.InterestSuccess}
       />
       <div>
-      <TopBar currentPage="interestPick" />
+        <TopBar currentPage="interestPick" />
         <div className="interest-container">
           <div className="interest-column">
-            <h1>Let’s get started by picking some interests</h1>
+            <h1>Let's get started by picking some interests</h1>
             <p>
               Alright, let's pick something we're interested in and get started!
             </p>
@@ -73,7 +73,7 @@ const InterestPick = ({
                   photo: false,
                   interest_page: false,
                   interest_pick: false,
-                  interest_success: true,
+                  interest_success: true
                 })
               }
             >

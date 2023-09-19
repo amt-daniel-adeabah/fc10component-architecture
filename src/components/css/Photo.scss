@@ -13,8 +13,13 @@
   @media (max-width: 1024px) {
     width: var(--container-width-mobile);
   }
+<<<<<<< Updated upstream
   @media (max-width: 1600px){
     width: var(--container-width-mobile)
+=======
+  @media (max-width: 1600px) {
+    width: var(--container-width-mobile);
+>>>>>>> Stashed changes
   }
 
   .photo-column {
@@ -44,11 +49,21 @@
 
     .upload {
       margin-top: 30vh;
+<<<<<<< Updated upstream
       background-color: #0267FF;
       color: #fff;
       @media (max-width: 1600px){
         margin-top: 20vh;
       }
+=======
+      background-color: #0267ff;
+      color: #fff;
+    }
+
+    .skip {
+      background-color: #ffffff;
+      color: #000;
+>>>>>>> Stashed changes
     }
 
     .skip {
@@ -57,4 +72,7 @@
     }
   }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
