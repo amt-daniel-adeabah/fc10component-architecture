@@ -49,7 +49,7 @@ const Register = () => {
             interestSuccess={currentPage === PageStates.InterestSuccess}
           />
           <div>
-            <TopBar currentPage="registerPage" />
+          <TopBar currentPage="registerPage" formHomePage={setFormPage} />
             <div className="account-creation">
               <form
                 className="account-form"

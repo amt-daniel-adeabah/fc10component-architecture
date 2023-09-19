@@ -29,7 +29,7 @@ const PhotoPage = ({
         interestSuccess={currentPage === PageStates.InterestSuccess}
       />
       <div>
-        <TopBar currentPage="photoPage" />
+        <TopBar currentPage="photoPage" formHomePage={formHomePage} /> 
         <div className="photo-container">
           <div className="photo-column">
             <h1>Add Photo</h1>
