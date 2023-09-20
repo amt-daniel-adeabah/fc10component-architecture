@@ -13,11 +13,7 @@ const Authentication = () => {
   const [formPage, setFormPage] = useState(() => {
     const savedState = localStorage.getItem("formPage");
     return savedState ? JSON.parse(savedState) : {
-      registerPage: true,
-      photoPage: false,
-      interestPage: false,
-      interestPick: false,
-      interestSuccess: false
+      registerPage: true
     };
   });
 
