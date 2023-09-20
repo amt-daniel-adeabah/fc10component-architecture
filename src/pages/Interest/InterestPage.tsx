@@ -1,15 +1,8 @@
-import "../../components/css/Interest.scss";
-import SideMenu from "../../components/SideMenu";
-import TopBar from "../../components/TopBar";
+import React from "react";
+import "..//Interest/Interest.scss";
+import SideMenu from "../../components/SideMenu/SideMenu";
+import TopBar from "../../components/TopBar/TopBar";
 import { FormPage } from "../../types/Types";
-
-const PageStates = {
-  Register: "register",
-  Photo: "photo",
-  Interest: "interest",
-  InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess"
-};
 
 const interestOptions = [
   { label: "+ Social Interaction", className: "active-button" },
@@ -32,19 +25,11 @@ const InterestPage = ({
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
-  const currentPage = PageStates.Interest;
-
   return (
     <div className="sidemenu-container">
-      <SideMenu
-        registerPage={currentPage === PageStates.Register}
-        photoPage={currentPage === PageStates.Photo}
-        interestPage={currentPage === PageStates.Interest}
-        interestPick={currentPage === PageStates.InterestPick}
-        interestSuccess={currentPage === PageStates.InterestSuccess}
-      />
+      <SideMenu currentPage="interest_page" formHomePage={formHomePage} />
       <div>
-      <TopBar currentPage="interestPage" formHomePage={formHomePage} /> 
+        <TopBar currentPage="interestPage" formHomePage={formHomePage} />
         <div className="interest-container">
           <div className="interest-column">
             <h1>Hey there! What brings you here?</h1>
@@ -63,7 +48,7 @@ const InterestPage = ({
               onClick={() =>
                 formHomePage({
                   register: false,
-                  photo: false,
+                  photoPage: false,
                   interest_page: false,
                   interest_pick: true,
                   interest_success: false

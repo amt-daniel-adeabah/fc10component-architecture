@@ -1,5 +1,5 @@
 import "./index.css";
-import Register from "./pages/Register";
+import Register from "./pages/Register/Register";
 
 function App() {
   return (

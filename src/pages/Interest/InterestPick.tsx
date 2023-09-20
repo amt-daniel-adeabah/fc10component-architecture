@@ -1,15 +1,7 @@
-import "../../components/css/Interest.scss";
-import SideMenu from "../../components/SideMenu";
-import TopBar from "../../components/TopBar";
+import "../Interest/Interest.scss";
+import SideMenu from "../../components/SideMenu/SideMenu";
+import TopBar from "../../components/TopBar/TopBar";
 import { FormPage } from "../../types/Types";
-
-const PageStates = {
-  Register: "register",
-  Photo: "photo",
-  Interest: "interest",
-  InterestPick: "interestPick",
-  InterestSuccess: "interestSuccess"
-};
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
@@ -35,17 +27,9 @@ const InterestPick = ({
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
-  const currentPage = PageStates.InterestPick;
-
   return (
     <div className="sidemenu-container">
-      <SideMenu
-        registerPage={currentPage === PageStates.Register}
-        photoPage={currentPage === PageStates.Photo}
-        interestPage={currentPage === PageStates.Interest}
-        interestPick={currentPage === PageStates.InterestPick}
-        interestSuccess={currentPage === PageStates.InterestSuccess}
-      />
+        <SideMenu currentPage="interest_pick" formHomePage={formHomePage} />
       <div>
       <TopBar currentPage="interestPick" formHomePage={formHomePage} /> 
         <div className="interest-container">
@@ -70,7 +54,7 @@ const InterestPick = ({
               onClick={() =>
                 formHomePage({
                   register: false,
-                  photo: false,
+                  photoPage: false,
                   interest_page: false,
                   interest_pick: false,
                   interest_success: true
