@@ -9,7 +9,7 @@ const backgroundImages = {
   WomanLaptopWhite,
   WomanHappy,
   BoyTablet,
-  ManLaptop,
+  ManLaptop
 };
 
 export default backgroundImages;

@@ -1,7 +1,7 @@
 import "../Interest/Interest.scss";
-import SideMenu from "../../components/SideMenu/SideMenu";
-import VictoryPhoto from "../../assets/images/victory-success.svg";
-import { FormPage } from "../../types/Types";
+import SideMenu from "../../../components/SideMenu/SideMenu";
+import VictoryPhoto from "../../../assets/images/victory-success.svg";
+import { FormPage } from "../../../types/Types";
 
 const InterestSuccess = ({
   formHomePage
@@ -9,9 +9,9 @@ const InterestSuccess = ({
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
   return (
-    <div className="success-width sidemenu-container">
-      <SideMenu currentPage="interest_success" formHomePage={formHomePage} />
-      <div className="success-column">
+    <div className="sidemenu-container">
+      <SideMenu currentPage="interestSuccess" formHomePage={formHomePage} />
+      <div className="success-container">
         <div className="interest-container">
           <div className="interest-column">
             <h1>Wohoo!</h1>
@@ -29,11 +29,11 @@ const InterestSuccess = ({
               className="continue"
               onClick={() =>
                 formHomePage({
-                  register: true,
+                  registerPage: true,
                   photoPage: false,
-                  interest_page: false,
-                  interest_pick: false,
-                  interest_success: false
+                  interestPage: false,
+                  interestPick: false,
+                  interestSuccess: false
                 })
               }
             >

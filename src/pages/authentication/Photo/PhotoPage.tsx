@@ -1,9 +1,9 @@
 import React from "react";
-import SideMenu from "../../components/SideMenu/SideMenu";
-import TopBar from "../../components/TopBar/TopBar";
-import BlankPhoto from "../../assets/images/empty-image.svg";
+import SideMenu from "../../../components/SideMenu/SideMenu";
+import TopBar from "../../../components/TopBar/TopBar";
+import BlankPhoto from "../../../assets/images/empty-image.svg";
 import "../Photo/Photo.scss";
-import { FormPage } from "../../types/Types";
+import { FormPage } from "../../../types/Types";
 
 const PhotoPage = ({
   formHomePage
@@ -25,11 +25,11 @@ const PhotoPage = ({
               className="upload"
               onClick={() =>
                 formHomePage({
-                  register: false,
+                  registerPage: false,
                   photoPage: false,
-                  interest_page: true,
-                  interest_pick: false,
-                  interest_success: false
+                  interestPage: true,
+                  interestPick: false,
+                  interestSuccess: false
                 })
               }
             >
@@ -39,11 +39,11 @@ const PhotoPage = ({
               className="skip"
               onClick={() =>
                 formHomePage({
-                  register: false,
+                  registerPage: false,
                   photoPage: false,
-                  interest_page: true,
-                  interest_pick: false,
-                  interest_success: false
+                  interestPage: true,
+                  interestPick: false,
+                  interestSuccess: false
                 })
               }
             >

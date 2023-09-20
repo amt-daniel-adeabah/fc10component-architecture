@@ -1,10 +1,10 @@
 import "./index.css";
-import Register from "./pages/Register/Register";
+import Authentication from "./pages/authentication/Authentication";
 
 function App() {
   return (
     <>
-      <Register />
+      <Authentication />
     </>
   );
 }
