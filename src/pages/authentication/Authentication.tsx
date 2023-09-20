@@ -5,11 +5,14 @@ import InterestPick from "./Interest/InterestPick";
 import InterestSuccess from "./Interest/InterestSuccess";
 import RegisterPage from "./Register/RegisterPage";
 
+type Components = {
+  [key: string]: JSX.Element;
+};
+
 const Authentication = () => {
-  // Load formPage from local storage 
   const [formPage, setFormPage] = useState(() => {
     const savedState = localStorage.getItem("formPage");
-    return savedState ? JSON.parse(savedState) : {  
+    return savedState ? JSON.parse(savedState) : {
       registerPage: true,
       photoPage: false,
       interestPage: false,
@@ -18,38 +21,23 @@ const Authentication = () => {
     };
   });
 
-  // Save formPage local storage if state changes
   useEffect(() => {
     localStorage.setItem("formPage", JSON.stringify(formPage));
   }, [formPage]);
 
-  const currentPage = formPage.registerPage
-    ? "registerPage"
-    : formPage.photoPage
-    ? "photoPage"
-    : formPage.interestPage
-    ? "interestPage"
-    : formPage.interestPick
-    ? "interestPick"
-    : formPage.interestSuccess
-    ? "interestSuccess"
-    : "";
+  const components: Components = {
+    registerPage: <RegisterPage formHomePage={setFormPage} />,
+    photoPage: <PhotoPage formHomePage={setFormPage} />,
+    interestPage: <InterestPage formHomePage={setFormPage} />,
+    interestPick: <InterestPick formHomePage={setFormPage} />,
+    interestSuccess: <InterestSuccess formHomePage={setFormPage} />
+  };
+
+  const currentPage = Object.keys(formPage).find(page => formPage[page]) || "";
 
   return (
     <>
-      {currentPage === "registerPage" && (
-        <RegisterPage formHomePage={setFormPage} />
-      )}
-      {currentPage === "photoPage" && <PhotoPage formHomePage={setFormPage} />}
-      {currentPage === "interestPage" && (
-        <InterestPage formHomePage={setFormPage} />
-      )}
-      {currentPage === "interestPick" && (
-        <InterestPick formHomePage={setFormPage} />
-      )}
-      {currentPage === "interestSuccess" && (
-        <InterestSuccess formHomePage={setFormPage} />
-      )}
+      {components[currentPage]}
     </>
   );
 };
