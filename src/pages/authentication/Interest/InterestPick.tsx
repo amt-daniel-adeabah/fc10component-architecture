@@ -1,7 +1,7 @@
 import "../Interest/Interest.scss";
-import SideMenu from "../../components/SideMenu/SideMenu";
-import TopBar from "../../components/TopBar/TopBar";
-import { FormPage } from "../../types/Types";
+import SideMenu from "../../../components/SideMenu/SideMenu";
+import TopBar from "../../../components/TopBar/TopBar";
+import { FormPage } from "../../../types/Types";
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
@@ -29,9 +29,9 @@ const InterestPick = ({
 }) => {
   return (
     <div className="sidemenu-container">
-        <SideMenu currentPage="interest_pick" formHomePage={formHomePage} />
+      <SideMenu currentPage="interestPick" formHomePage={formHomePage} />
       <div>
-      <TopBar currentPage="interestPick" formHomePage={formHomePage} /> 
+        <TopBar currentPage="interestPick" formHomePage={formHomePage} />
         <div className="interest-container">
           <div className="interest-column">
             <h1>Let's get started by picking some interests</h1>
@@ -53,11 +53,11 @@ const InterestPick = ({
               className="continue"
               onClick={() =>
                 formHomePage({
-                  register: false,
+                  registerPage: false,
                   photoPage: false,
-                  interest_page: false,
-                  interest_pick: false,
-                  interest_success: true
+                  interestPage: false,
+                  interestPick: false,
+                  interestSuccess: true
                 })
               }
             >

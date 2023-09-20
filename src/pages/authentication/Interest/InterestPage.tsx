@@ -1,8 +1,8 @@
 import React from "react";
 import "..//Interest/Interest.scss";
-import SideMenu from "../../components/SideMenu/SideMenu";
-import TopBar from "../../components/TopBar/TopBar";
-import { FormPage } from "../../types/Types";
+import SideMenu from "../../../components/SideMenu/SideMenu";
+import TopBar from "../../../components/TopBar/TopBar";
+import { FormPage } from "../../../types/Types";
 
 const interestOptions = [
   { label: "+ Social Interaction", className: "active-button" },
@@ -27,7 +27,7 @@ const InterestPage = ({
 }) => {
   return (
     <div className="sidemenu-container">
-      <SideMenu currentPage="interest_page" formHomePage={formHomePage} />
+      <SideMenu currentPage="interestPage" formHomePage={formHomePage} />
       <div>
         <TopBar currentPage="interestPage" formHomePage={formHomePage} />
         <div className="interest-container">
@@ -47,11 +47,11 @@ const InterestPage = ({
               className="continue"
               onClick={() =>
                 formHomePage({
-                  register: false,
+                  registerPage: false,
                   photoPage: false,
-                  interest_page: false,
-                  interest_pick: true,
-                  interest_success: false
+                  interestPage: false,
+                  interestPick: true,
+                  interestSuccess: false
                 })
               }
             >

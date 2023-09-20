@@ -14,10 +14,12 @@ const SideMenu: React.FC<SideMenuProps> = ({ currentPage }) => {
     photoPage: backgroundImages.BoyTablet,
     interestPage: backgroundImages.ManLaptop,
     interestPick: backgroundImages.WomanLaptopWhite,
-    interestSuccess: backgroundImages.WomanHappy,
+    interestSuccess: backgroundImages.WomanHappy
   };
 
-  const backgroundImage = backgroundImagesMap[currentPage as keyof typeof backgroundImagesMap] || backgroundImages.WomanLaptop;
+  const backgroundImage =
+    backgroundImagesMap[currentPage as keyof typeof backgroundImagesMap] ||
+    backgroundImages.WomanLaptop;
 
   return (
     <div className="sidemenu">

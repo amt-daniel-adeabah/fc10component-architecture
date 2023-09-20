@@ -7,8 +7,9 @@
   --pick-button-size: 7rem;
 }
 
-.success-width {
+.success-container {
   @media (max-width: 1600px) {
+    margin: 0 25px;
     width: var(--container-width-desktop);
   }
 }

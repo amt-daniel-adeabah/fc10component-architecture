@@ -1,7 +1,7 @@
 export type FormPage = {
-  register: boolean;
+  registerPage: boolean;
   photoPage: boolean;
-  interest_page: boolean;
-  interest_pick: boolean;
-  interest_success: boolean;
+  interestPage: boolean;
+  interestPick: boolean;
+  interestSuccess: boolean;
 };
