@@ -1,8 +1,7 @@
 import React from "react";
-import "..//Interest/Interest.scss";
-import SideMenu from "../../../components/SideMenu/SideMenu";
-import TopBar from "../../../components/TopBar/TopBar";
+import "../Interest/Interest.scss";
 import { FormPage } from "../../../types/Types";
+import { handleFormHomePageInterest } from "../../../utils/formHelpers";
 
 const interestOptions = [
   { label: "+ Social Interaction", className: "active-button" },
@@ -25,41 +24,24 @@ const InterestPage = ({
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
+  const handleClick = handleFormHomePageInterest(formHomePage);
+
   return (
-    <div className="sidemenu-container">
-      <SideMenu currentPage="interestPage" formHomePage={formHomePage} />
-      <div>
-        <TopBar currentPage="interestPage" formHomePage={formHomePage} />
-        <div className="interest-container">
-          <div className="interest-column">
-            <h1>Hey there! What brings you here?</h1>
-            <p>This will help us make great recommendations.</p>
+    <div className="interest-content">
+      <h1>Hey there! What brings you here?</h1>
+      <p>This will help us make great recommendations.</p>
 
-            {interestOptions.map((option, index) => (
-              <InterestButton
-                key={index}
-                label={option.label}
-                className={option.className}
-              />
-            ))}
+      {interestOptions.map((option, index) => (
+        <InterestButton
+          key={index}
+          label={option.label}
+          className={option.className}
+        />
+      ))}
 
-            <button
-              className="continue"
-              onClick={() =>
-                formHomePage({
-                  registerPage: false,
-                  photoPage: false,
-                  interestPage: false,
-                  interestPick: true,
-                  interestSuccess: false
-                })
-              }
-            >
-              Continue
-            </button>
-          </div>
-        </div>
-      </div>
+      <button className="continue" onClick={handleClick}>
+        Continue
+      </button>
     </div>
   );
 };

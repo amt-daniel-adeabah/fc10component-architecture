@@ -1,140 +1,120 @@
 :root {
-  --container-width-desktop: 1024px;
-  --container-width-mobile: 400px;
-  --container-width-large: 1030px;
   --button-width: 200px;
   --button-height: 30px;
   --pick-button-size: 7rem;
 }
 
-.success-container {
-  @media (max-width: 1600px) {
-    margin: 0 25px;
-    width: var(--container-width-desktop);
-  }
+.interest-success {
+  margin: 0rem 7rem;
 }
-.success-column {
-  @media (max-width: 1600px) {
-  }
-}
-.interest-container {
-  margin: 0 auto;
-  width: var(--container-width-desktop);
 
-  @media (max-width: 1024px) {
-    width: var(--container-width-mobile);
-  }
-  @media (max-width: 1600px) {
-    width: var(--container-width-mobile);
-  }
+.interest-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  margin: 4rem 0rem;
 
-  .interest-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem;
+  .pick-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
 
-    .pick-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
-
-      .pick-button {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: var(--button-width);
-        height: var(--button-width);
-        padding: 10px;
-        @media (max-width: 1600px){
-          width: var(--pick-button-size);
-          height: var(--pick-button-size);
-        }
-        h1 {
-          font-size: 1.5rem;
-        }
-
-        button {
-          position: absolute;
-          bottom: 20px;
-          width: 60px;
-          border: 1px solid #b5b1b1;
-        }
-      }
-
-      .pick-gaming-button {
-        background-color: rgba(223, 155, 224, 0.6);
-
-        img {
-          width: 20px;
-          height: 15px;
-        }
-      }
-
-      .pick-fashion-button {
-        background-color: rgba(204, 255, 204, 0.6);
-      }
-
-      .pick-music-button {
-        background-color: rgba(255, 194, 153, 0.4);
-      }
-
-      .pick-reading-button {
-        background-color: rgba(37, 117, 209, 0.2);
-      }
-    }
-
-    .victory-success {
-      height: 22rem;
-      width: 61.5rem;
-    }
-
-    h1 {
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    button {
+    .pick-button {
+      position: relative;
+      display: flex;
+      flex-direction: column;
       width: var(--button-width);
-      height: var(--button-height);
-      margin-top: 10px;
-      outline: none;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      width: calc(var(--button-width) + 10px);
-    }
-
-    .active-button {
-      background-color: #0267ff;
-      color: #fff;
-      border-radius: 15px;
-      margin-top: 30px;
-    }
-
-    .interests-button {
-      background-color: #ffffff;
-      color: #000;
-      border: 1px solid #333;
-      border-radius: 15px;
-      margin-top: 15px;
-    }
-
-    .continue {
-      margin-top: 20vh;
-      background-color: #0267ff;
-      color: #fff;
+      height: var(--button-width);
+      padding: 10px;
       @media (max-width: 1600px) {
-        margin-top: 3vh;
+        width: var(--pick-button-size);
+        height: var(--pick-button-size);
       }
+      h1 {
+        font-size: 1rem;
+      }
+
+      button {
+        position: absolute;
+        bottom: 20px;
+        width: 60px;
+        border: 1px solid #b5b1b1;
+      }
+    }
+
+    .pick-gaming-button {
+      background-color: rgba(223, 155, 224, 0.6);
+
+      img {
+        width: 20px;
+        height: 15px;
+      }
+    }
+
+    .pick-fashion-button {
+      background-color: rgba(204, 255, 204, 0.6);
+    }
+
+    .pick-music-button {
+      background-color: rgba(255, 194, 153, 0.4);
+    }
+
+    .pick-reading-button {
+      background-color: rgba(37, 117, 209, 0.2);
+    }
+  }
+
+  .victory-success {
+    height: 22rem;
+    width: 61.5rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: var(--button-width);
+    height: var(--button-height);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    width: calc(var(--button-width) + 10px);
+  }
+
+  .active-button {
+    background-color: #0267ff;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+
+  .interests-button {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #333;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+
+  .continue {
+    margin-top: 20vh;
+    background-color: #0267ff;
+    color: #fff;
+    @media (max-width: 1600px) {
+      margin-top: 3vh;
     }
   }
 }

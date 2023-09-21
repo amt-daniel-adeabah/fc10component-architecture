@@ -1,7 +1,8 @@
+import React from "react";
 import "../Interest/Interest.scss";
-import SideMenu from "../../../components/SideMenu/SideMenu";
-import TopBar from "../../../components/TopBar/TopBar";
 import { FormPage } from "../../../types/Types";
+import { handleFormHomePageSuccess } from "../../../utils/formHelpers";
+
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
@@ -27,45 +28,24 @@ const InterestPick = ({
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
+  const handleClick = handleFormHomePageSuccess(formHomePage);
+
   return (
-    <div className="sidemenu-container">
-      <SideMenu currentPage="interestPick" formHomePage={formHomePage} />
-      <div>
-        <TopBar currentPage="interestPick" formHomePage={formHomePage} />
-        <div className="interest-container">
-          <div className="interest-column">
-            <h1>Let's get started by picking some interests</h1>
-            <p>
-              Alright, let's pick something we're interested in and get started!
-            </p>
-
-            <div className="pick-row">
-              {interests.map((interest, index) => (
-                <InterestButton
-                  key={index}
-                  name={interest.name}
-                  className={interest.className}
-                />
-              ))}
-            </div>
-
-            <button
-              className="continue"
-              onClick={() =>
-                formHomePage({
-                  registerPage: false,
-                  photoPage: false,
-                  interestPage: false,
-                  interestPick: false,
-                  interestSuccess: true
-                })
-              }
-            >
-              Continue
-            </button>
-          </div>
-        </div>
+    <div className="interest-content">
+      <h1>Let's get started by picking some interests</h1>
+      <p>Alright, let's pick something we're interested in and get started!</p>
+      <div className="pick-row">
+        {interests.map((interest, index) => (
+          <InterestButton
+            key={index}
+            name={interest.name}
+            className={interest.className}
+          />
+        ))}
       </div>
+      <button className="continue" onClick={handleClick}>
+        Continue
+      </button>
     </div>
   );
 };
