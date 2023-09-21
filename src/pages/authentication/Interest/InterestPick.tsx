@@ -2,7 +2,7 @@ import React from "react";
 import "../Interest/Interest.scss";
 import { FormPage } from "../../../types/Types";
 import { handleFormHomePageSuccess } from "../../../utils/formHelpers";
-
+import SecondInterest from "./components/SecondInterest"
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
@@ -10,18 +10,6 @@ const interests = [
   { name: "Music", className: "pick-music-button" },
   { name: "Reading", className: "pick-reading-button" }
 ];
-
-interface InterestButtonProps {
-  name: string;
-  className: string;
-}
-
-const InterestButton = ({ name, className }: InterestButtonProps) => (
-  <div className={`pick-button ${className}`}>
-    <h1>{name}</h1>
-    <button>Add</button>
-  </div>
-);
 
 const InterestPick = ({
   formHomePage
@@ -36,7 +24,7 @@ const InterestPick = ({
       <p>Alright, let's pick something we're interested in and get started!</p>
       <div className="pick-row">
         {interests.map((interest, index) => (
-          <InterestButton
+          <SecondInterest
             key={index}
             name={interest.name}
             className={interest.className}
