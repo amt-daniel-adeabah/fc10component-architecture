@@ -4,7 +4,7 @@ import { FormPage } from "../../types/Types";
 import backgroundImages from "./images/BackgroundImages";
 
 interface SideMenuProps {
-  currentPage: keyof FormPage;
+  currentPage: string;
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }
 

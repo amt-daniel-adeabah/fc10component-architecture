@@ -1,44 +1,17 @@
-:root {
-  --sidemenu-width-mobile: 0vw;
-  --sidemenu-width-small: 20vw;
-  --sidemenu-width-medium: 50%;
-  --sidemenu-width-large: 100%;
-}
-
-* {
-  overflow: hidden;
-}
-
 .sidemenu-container {
+  width: 50%;
   display: flex;
-  width: 100%;
+  overflow: hidden;
 
-  @media (max-width: 650px) {
-    justify-content: center;
-  }
-}
-
-.sidemenu {
-  position: relative;
-  height: 100vh;
-  width: 60%;
-  background-color: #0267ff;
-
-  img {
-    width: 100vh;
-    height: 109vh;
-  }
-
-  @media (max-width: 600px) {
-    width: var(--sidemenu-width-mobile);
-  }
-
-  @media (min-width: 601px) and (max-width: 853.2px) {
-    width: var(--sidemenu-width-small);
-  }
-}
-@media only screen and (max-width: 1600px) {
   .sidemenu {
-    width: var(--sidemenu-width-large);
+    position: relative;
+    height: 100vh;
+    background-color: #0267ff;
+    
+    img {
+      min-width: 50vw;
+      width: 100vh;
+      height: 109vh;
+    }
   }
 }
