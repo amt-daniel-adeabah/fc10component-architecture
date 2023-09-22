@@ -2,22 +2,14 @@ import React from "react";
 import "../Interest/Interest.scss";
 import { FormPage } from "../../../types/Types";
 import { handleFormHomePageInterest } from "../../../utils/formHelpers";
+import FirstInterest from "./components/FirstInterest";
 
 const interestOptions = [
-  { label: "+ Social Interaction", className: "active-button" },
-  { label: "+ Personal development", className: "interests-button" },
-  { label: "+ Entertainment and Fun", className: "interests-button" },
-  { label: "+ Rewards and recognition", className: "interests-button" }
+  { label: "Social Interaction", className: "interests-button" },
+  { label: "Personal development", className: "interests-button" },
+  { label: "Entertainment and Fun", className: "interests-button" },
+  { label: "Rewards and recognition", className: "interests-button" }
 ];
-
-interface InterestButtonProps {
-  label: string;
-  className: string;
-}
-
-const InterestButton = ({ label, className }: InterestButtonProps) => (
-  <button className={className}>{label}</button>
-);
 
 const InterestPage = ({
   formHomePage
@@ -32,10 +24,10 @@ const InterestPage = ({
       <p>This will help us make great recommendations.</p>
 
       {interestOptions.map((option, index) => (
-        <InterestButton
+        <FirstInterest
           key={index}
           label={option.label}
-          className={option.className}
+          initialClassName={option.className}
         />
       ))}
 
