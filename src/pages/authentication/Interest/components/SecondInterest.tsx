@@ -17,7 +17,7 @@ const SecondInterest = ({ name, className }: SecondInterestProps) => {
     <div className={`pick-button ${className}`}>
       <h1>{name}</h1>
       <button onClick={toggleSelected}>
-        {selected ? <img src={DoneIcon} alt="" /> : "Add"}
+        {selected ? <img src={DoneIcon} className="selected-icon" alt="" /> : "Add"}
       </button>
     </div>
   );

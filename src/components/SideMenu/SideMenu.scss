@@ -1,5 +1,8 @@
 .sidemenu-container {
   width: 50%;
+  @media (min-width: 0px) and (max-width: 638px) {
+    width: 0%;
+  }
   display: flex;
   overflow: hidden;
 

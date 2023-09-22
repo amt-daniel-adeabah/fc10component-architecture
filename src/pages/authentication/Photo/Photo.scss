@@ -8,9 +8,22 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 375px;
+  width: 100%;
   margin: 4rem 0rem;
-  
+
+  h1,
+  p {
+    margin: 0rem 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
   img {
     width: 160px;
     margin: 2rem;

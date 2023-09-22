@@ -35,11 +35,11 @@ const TopBar: React.FC<TopBarProps> = ({ currentPage, formHomePage }) => {
       <div className="topnav">
         {showBackButton && (
           <div className="back-button" onClick={handleBackClick}>
-            <img src={BackArrow} alt="" /> Back
+            <img src={BackArrow} alt="" /> <span>Back</span>
           </div>
         )}
         <div className="steps">
-          Step {step} of 4
+          <strong>Step {step} </strong>of 4
         </div>
         Exit
       </div>
