@@ -35,7 +35,7 @@ const Authentication = ({
             <TopBar currentPage={currentPage} formHomePage={setFormPage} />
           )}
           {isLoading ? (
-                <img src={SpinningIcon} className="loading" alt="" />
+              <img src={SpinningIcon} className="loading" alt="" />
           ) : (
             components[currentPage]
           )}
