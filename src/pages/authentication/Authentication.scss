@@ -6,6 +6,7 @@
   overflow: hidden;
   overflow-y: auto;
   overflow-x: hidden;
+  margin: 30px;
 
   .right-column {
     display: flex;
@@ -14,6 +15,6 @@
   }
 
   .loading {
-   margin: 10vh 0vh;
+   margin: auto;
   }
 }

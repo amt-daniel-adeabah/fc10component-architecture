@@ -3,8 +3,6 @@
   @media (min-width: 0px) and (max-width: 638px) {
     width: 89vw;
   }
-  padding: 2rem;
-  border-bottom: 1px solid #f3f6f8;
 
   .topnav {
     display: flex;
@@ -17,7 +15,7 @@
     cursor: pointer;
 
     span {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
     }
   }
 }
