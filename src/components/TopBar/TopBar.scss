@@ -1,15 +1,23 @@
 .top-container {
   width: 50vw;
-  margin: 10px 30px;
+  @media (min-width: 0px) and (max-width: 638px) {
+    width: 89vw;
+  }
+  padding: 2rem;
+  border-bottom: 1px solid #f3f6f8;
 
   .topnav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40vw;
+    width: 95%;
   }
 
   .back-button {
     cursor: pointer;
+
+    span {
+      margin-left: 1rem;
+    }
   }
 }

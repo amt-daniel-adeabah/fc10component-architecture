@@ -5,7 +5,7 @@
 }
 
 .interest-success {
-  margin: 0rem 7rem;
+  width: 85%;
 }
 
 .interest-content {
@@ -13,7 +13,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 375px;
+  width: 100%;
   margin: 4rem 0rem;
 
   .pick-row {
@@ -31,6 +31,10 @@
       @media (max-width: 1600px) {
         width: var(--pick-button-size);
         height: var(--pick-button-size);
+        .selected-icon {
+          width: 20px;
+          height: 20px;
+        }
       }
       h1 {
         font-size: 1rem;
@@ -66,18 +70,21 @@
     }
   }
 
-  .victory-success {
-    height: 22rem;
-    width: 61.5rem;
+  .victory-success{
+    width: 300px;
+  }
+
+  h1,
+  p {
+    margin: 0.5rem 2rem;
   }
 
   h1 {
-    margin-bottom: 1rem;
     font-size: 1.5rem;
   }
 
   p {
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
   }
 
   button {
@@ -98,7 +105,7 @@
     background-color: #0267ff;
     color: #fff;
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   .interests-button {
@@ -113,8 +120,5 @@
     margin-top: 20vh;
     background-color: #0267ff;
     color: #fff;
-    @media (max-width: 1600px) {
-      margin-top: 3vh;
-    }
   }
 }
