@@ -10,7 +10,7 @@ interface TopBarProps {
 const pageMap: Record<string, Partial<FormPage>> = {
   photoPage: { registerPage: true },
   interestPage: { photoPage: true },
-  interestPick: { interestPage: true },
+  interestPick: { interestPage: true }
 };
 
 const TopBar: React.FC<TopBarProps> = ({ currentPage, formHomePage }) => {
@@ -24,7 +24,7 @@ const TopBar: React.FC<TopBarProps> = ({ currentPage, formHomePage }) => {
       interestPage: false,
       interestPick: false,
       interestSuccess: false,
-      ...currentPageData,
+      ...currentPageData
     });
   };
 

@@ -10,7 +10,8 @@ const RegisterPage = ({
 }: {
   formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
 }) => {
-  const { formData, formErrors, handleInputChange, handleSubmit } = useRegisterForm();
+  const { formData, formErrors, handleInputChange, handleSubmit } =
+    useRegisterForm();
   const handleClick = handleFormHomePageRegister(formHomePage);
 
   return (
@@ -48,7 +49,9 @@ const RegisterPage = ({
             value={formData.password}
             onChange={handleInputChange}
           />
-          {formErrors.password && <p className="error">{formErrors.password}</p>}
+          {formErrors.password && (
+            <p className="error">{formErrors.password}</p>
+          )}
         </div>
 
         <button type="submit" className="create">

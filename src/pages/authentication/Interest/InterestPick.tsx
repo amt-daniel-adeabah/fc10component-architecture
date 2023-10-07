@@ -2,7 +2,7 @@ import React from "react";
 import "../Interest/Interest.scss";
 import { FormPage } from "../../../types/Types";
 import { handleFormHomePageSuccess } from "../../../utils/formHelpers";
-import SecondInterest from "./components/SecondInterest"
+import SecondInterest from "./components/SecondInterest";
 
 const interests = [
   { name: "Game", className: "pick-gaming-button" },
