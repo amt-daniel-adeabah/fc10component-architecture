@@ -4,7 +4,11 @@ import "../Photo/Photo.scss";
 import { FormPage } from "../../../types/Types";
 import { handleFormHomePagePhoto } from "../../../utils/formHelpers";
 
-const PhotoPage = ({ formHomePage }: { formHomePage: React.Dispatch<React.SetStateAction<FormPage>> }) => {
+const PhotoPage = ({
+  formHomePage
+}: {
+  formHomePage: React.Dispatch<React.SetStateAction<FormPage>>;
+}) => {
   const handleClick = handleFormHomePagePhoto(formHomePage);
 
   return (

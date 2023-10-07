@@ -32,26 +32,26 @@ export function useRegisterForm() {
 
   const validateForm = () => {
     const errors: FormErrors = { name: "", email: "", password: "" };
-  
+
     if (!formData.name.trim()) {
       errors.name = "Name is required";
     }
-  
+
     if (!formData.email.trim()) {
       errors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.email = "Invalid email format";
     }
-  
+
     if (!formData.password.trim()) {
       errors.password = "Password is required";
     }
-  
+
     setFormErrors(errors);
-  
+
     const hasErrors = errors.name || errors.email || errors.password;
     return !hasErrors;
-  };  
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,6 +66,6 @@ export function useRegisterForm() {
     formData,
     formErrors,
     handleInputChange,
-    handleSubmit,
+    handleSubmit
   };
 }

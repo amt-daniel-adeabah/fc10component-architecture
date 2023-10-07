@@ -32,7 +32,8 @@ export function AuthState() {
   };
 
   // The current page based on the formPage state.
-  const currentPage = Object.keys(formPage).find((page) => formPage[page]) || "";
+  const currentPage =
+    Object.keys(formPage).find((page) => formPage[page]) || "";
 
   const showTopbar = currentPage !== "interestSuccess";
 

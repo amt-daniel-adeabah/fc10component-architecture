@@ -4,7 +4,6 @@ import VictoryPhoto from "../../../assets/images/victory-success.svg";
 import { FormPage } from "../../../types/Types";
 import { handleFormHomePageSuccessDone } from "../../../utils/formHelpers";
 
-
 const InterestSuccess = ({
   formHomePage
 }: {
